@@ -2,21 +2,6 @@
 To store N records we require a balanced binary search tree (BST) of height no larger than log(N) + 1.
 """
 
-"""
-			8
-		7
-			6
-	5
-			4
-		3
-			∅
-2
-		∅
-	3       0
-		1   
-            0
-"""
-
 
 class TreeNode:
     def __init__(self, key):
@@ -171,7 +156,6 @@ def is_bst(node):
     min_key = min(remove_none([min_l, node.key, min_r]))
     max_key = max(remove_none([max_l, node.key, max_r]))
     return is_bst_node, min_key, max_key
-
 
 
 if __name__ == "__main__":
